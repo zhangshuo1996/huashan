@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+
+</script>
+<body>
+    <form>
+        请输入要查找的学校名:
+        <br>
+            <input type="text" name="search_school_name">
+        <br>
+        请输入要查找的教师名:
+        <br>
+            <input type="text" name="search_teacher_name">
+        <br>
+        请输入要查找的项目类型：
+        <br>
+            <input type="text" name="search_type">
+            <button type="submit" class="btn btn_color" >搜索</button>
+        <br>
+    </form>
+
+    <p>微服务-获取{{ school_name }} 教师 {{ teacher_name }}的基金项目</p>
+
+    <table border="1">
+        <tr>
+            <th>项目名称</th>
+            <th>项目经费</th>
+            <th>项目所属</th>
+            <th>项目类别</th>
+            <th>项目年份</th>
+            <th>项目级别</th>
+        </tr>
+
+
+        {% for project in projects1 %}
+            <tr>
+                <td>{{ project["title"] }}</td>
+                <td>{{ project['money'] }}</td>
+                <td>{{ project['belong'] }}</td>
+                <td>{{ project['type'] }}</td>
+                <td>{{ project['year'] }}</td>
+                <td>{{ project['level'] }}</td>
+
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+</body>
+</html>

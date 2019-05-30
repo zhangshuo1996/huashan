@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+    <div id="div1", style="position:relative;">
+              <select id="select1", style="width:120px;" onchange="is_1(this.value)">
+                <option value="面上项目">面上项目</option>
+                <option value="重点项目">重点项目</option>
+              </select>
+              <input id="input" name="input" class="iInput">
+    </div>
+
+    <script type="text/javascript">
+        {#var x = document.getElementById("select1")#}
+        function is_1(v) {
+            if(true){
+                {#document.write('<p>' + x.value +  '<p>')#}
+                document.write('<p>' + v +  '<p>')
+            }
+        }
+
+    </script>
+</body>
+</html>
